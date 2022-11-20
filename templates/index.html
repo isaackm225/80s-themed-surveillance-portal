@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>The Watcher</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/theWatcher.css') }}">
+
+{% endblock %}
+
+
+{% block body %}
+<div class="title-container">
+    <div id="top">
+        
+        <div id="sky">
+            
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="ground">      
+        </div>
+    </div>
+    <div id="text">
+        <h1>Welcome to The Watcher Portal</h1>
+        <h2> Designed by Isaac K.</h2>
+    </div>
+</div>
+
+<div class="stream">
+    <img src="{{ url_for('video') }}" id="video-capture">
+</div>
+
+{% endblock %}

@@ -1,0 +1,267 @@
+@font-face {
+	font-family: 'Alien Androids';
+	src: url(../assets/Alien\ Androids.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'Batuphat-Script';
+	src: url(../assets/Batuphat-Script.woff) format('woff');
+}
+
+:root {
+	--navy: #0c0c4a;
+	--dark-navy: #060726;
+	--pink: rgba(213, 84, 213, 1);
+	--pink2: rgba(213, 84, 213, 0.7);
+}
+
+*::before,
+*::after {
+	content: "";
+	position: absolute;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100vw;
+	min-width: 900px;
+	height: 100vh;
+	min-height: 800px;
+	background: black;
+	color: white;
+	display: grid;
+	place-items: center;
+	filter: saturate(130%)contrast(125%);
+}
+
+main{
+	
+	background: black !important;
+}
+
+.title-container{
+	overflow: hidden;
+	padding: 1rem;
+	cursor:crosshair;
+	min-width: 800px;
+	max-width: 90vw;
+	min-height: 50vh;
+	background: var(--navy);
+	display: grid;
+	grid:
+	"top" 60%
+	"bottom" 40%;
+	position: relative;
+	border: 0.5rem solid;
+	border-color: darkmagenta magenta;
+	outline: 0.5rem ridge cyan;
+	outline-offset: 0.25rem;
+	margin: auto;
+	top: 1rem;
+}
+
+#top{
+	height: 120%;
+	background: linear-gradient(transparent 50%, hotpink 160%);
+	position: relative;
+	box-shadow: 0 1rem 65px 3px white;
+	width: 110%;
+	right: 1rem;
+}
+
+
+
+#bottom{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		hotpink -60%, 
+		transparent 40%, 
+		transparent 60%, 
+		hotpink 140%);
+		bottom: -2rem;
+		transform: perspective(500px)rotateX(60deg);
+		clip-path: polygon(0 100%, 0 55%, 100% 55%, 100% 100%);
+	
+}
+
+
+#ground{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 55%;
+	background: repeating-linear-gradient(
+		white 2px,
+			transparent 3px,
+			transparent 30px
+			),
+			repeating-linear-gradient(90deg,
+			white 2px,
+			transparent 3px,
+			transparent 40px
+			);
+		filter: 
+			drop-shadow(0 0 1px cyan)
+			drop-shadow(0 0 3px cyan)
+			drop-shadow(0 0 7px cyan);
+	animation: move 1s linear infinite;
+}
+
+#sky{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: repeating-linear-gradient(
+		white 2px,
+			transparent 3px,
+			transparent 40px
+			),
+			repeating-linear-gradient(90deg,
+			white 2px,
+			transparent 3px,
+			transparent 40px
+			);
+		filter: 
+			drop-shadow(0 0 1px magenta)
+			drop-shadow(0 0 3px magenta)
+			drop-shadow(0 0 7px magenta);
+	animation: move 1s linear infinite;
+	opacity: 0.2;
+}
+
+#text{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	justify-content: center;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+#text h1 {
+	font-family: 'Alien Androids';
+	text-transform: uppercase;
+	font-size: 5em;
+	transform: translateY(25px);
+	background: linear-gradient(
+		cornflowerblue 30%,
+		white,
+		darkmagenta 60%,
+		cornflowerblue 100%
+	);
+	color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 1px silver;
+	filter:
+		drop-shadow(5px 5px 1px black)
+		drop-shadow(5px 5px 1px magenta);
+	animation: bg-shift 0.5s ease-in-out infinite alternate;
+
+}
+
+#text h2{
+	font-family: 'Batuphat-Script';
+	font-size: 4em;
+	font-weight: 100;
+	transform: translateY(30px)rotateZ(-5deg);
+	text-shadow:
+		0 0 3px magenta,
+		0 0 7px magenta,
+		0 0 15px black,
+		0 0 15px black;
+	animation: hover 1s ease-in-out infinite;
+}
+
+@keyframes move {
+	to {
+		background-position-y: 55px;
+	}
+	
+}
+
+@keyframes bg-shift {
+	0%{
+		background-position: 0 -25px;
+	}
+	100%{
+		background-position: 0 25px;
+	}
+	
+}
+
+@keyframes hover {
+	0%{
+		transform: 
+			translateY(50px)
+			rotateZ(-5deg)
+			perspective(200px)
+			translateZ(0);
+			
+		}
+	50%{
+		transform: 
+			translateY(50px)
+			rotateZ(-5deg)
+			perspective(200px)
+			translateZ(20px);
+		
+		}
+	100%{
+		transform: 
+			translateY(50px)
+			rotateZ(-5deg)
+			perspective(200px)
+			translateZ(0);
+		}
+}
+
+
+.banner{
+	background-color: black;
+	width: 100vw;
+}
+
+
+.hero {
+	max-width: 1024px;
+	display: block;
+	margin: 0 auto;
+}
+
+.copy {
+	columns: 2 350px;
+	column-rule: 1px solid black;
+	break-inside: after-white-space;
+	padding: 0 10px;
+	text-align: justify;
+}
+
+.inline {
+	max-width: 250px;
+	padding: 5px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
