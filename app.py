@@ -9,7 +9,6 @@ def generate_frames():
             
         ## read the camera frame
         success,frame=camera.read()
-        print(success)
         if not success:
             break
         else:
