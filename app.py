@@ -1,4 +1,4 @@
-from flask import Flask, render_template,Response
+from flask import Flask, render_template,Response,url_for
 import cv2
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def index():
 
 @app.route('/video')
 def video():
-    return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
     
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run()

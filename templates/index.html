@@ -3,7 +3,7 @@
 {% block head %}
 
 <title>The Watcher</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/theWatcher.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
 {% endblock %}
 
@@ -27,7 +27,7 @@
 </div>
 
 <div class="stream">
-    <img src="{{ url_for('video') }}" id="video-capture">
+    <img src="{{ url_for('video') }}" id="video-capture"/>
 </div>
 
 {% endblock %}
