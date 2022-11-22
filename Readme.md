@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <img src="banner.png" alt="banner-logo" width="750px">
+  <img src="Screenshot 2022-11-22 072800.jpg" alt="banner-logo" width="750px">
   <br>
   <br>
   The Watcher Portal
@@ -18,7 +18,7 @@
 
 ##Screenshots
 
-<img src="screenshot.png" alt="screenshot-of-the-portal" width="1000px">
+<img src="Screenshot 2022-11-22 072733.jpg" alt="screenshot-of-the-portal" width="1000px">
 
 ## How to use it
 
