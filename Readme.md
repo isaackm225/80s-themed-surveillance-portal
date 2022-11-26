@@ -17,7 +17,7 @@
   <a href="https://wakatime.com/badge/github/Izy-stack/80s-themed-surveillance-portal"><img src="https://wakatime.com/badge/github/Izy-stack/80s-themed-surveillance-portal.svg" alt="wakatime"></a>
 </p>
 
-##Screenshots
+## Screenshots
 
 <img src="Screenshot 2022-11-22 072733.jpg" alt="screenshot-of-the-portal" width="1000px">
 
