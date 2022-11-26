@@ -44,8 +44,8 @@ $ python3 aoo.py
 
 ## You may also like...
 
-- [Leetcode-serving-alarm](https://github.com/Izy-stack/LT-serving-alarm) - The Dojo Alarm
-- [80s-themed-surveillance-web-portal](https://github.com/Izy-stack/80s-themed-surveillance-portal) - A web portal to serve live footage from camera
+- [Leetcode-serving-alarm](https://github.com/Izy-stack/LT-serving-alarm) - The Dojo Alarm.
+- [Clip-Trimmer](https://github.com/Izy-stack/Clip-Trimmer) - Python script to automate clip making from longer video.
 
 
 ---
